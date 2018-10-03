@@ -1,0 +1,69 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'nodemodules' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 verbose config Skipping project config: /home/segond/.npmrc. (matches userconfig)
+5 silly loadCurrentTree Starting
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 silly fetchPackageMetaData nodemodules
+9 silly fetchNamedPackageData nodemodules
+10 silly mapToRegistry name nodemodules
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry uri https://registry.npmjs.org/nodemodules
+14 verbose request uri https://registry.npmjs.org/nodemodules
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 14:43:35
+17 verbose request id dcd541b49db966ef
+18 http request GET https://registry.npmjs.org/nodemodules
+19 http 200 https://registry.npmjs.org/nodemodules
+20 verbose headers { date: 'Wed, 03 Oct 2018 12:43:36 GMT',
+20 verbose headers   'content-type': 'application/json; charset=UTF-8',
+20 verbose headers   'transfer-encoding': 'chunked',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'set-cookie':
+20 verbose headers    [ '__cfduid=dc685f2eb393b9c80a7d8ba24d74ef90f1538570615; expires=Thu, 03-Oct-19 12:43:35 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+20 verbose headers   'cf-cache-status': 'MISS',
+20 verbose headers   'cache-control': 'max-age=300',
+20 verbose headers   'cf-ray': '463f7eca490bc027-MRS',
+20 verbose headers   etag: 'W/"afcf99d55f3e391177829f0d6883433c"',
+20 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+20 verbose headers   'last-modified': 'Sun, 27 May 2018 10:28:17 GMT',
+20 verbose headers   vary: 'accept-encoding, accept',
+20 verbose headers   server: 'cloudflare',
+20 verbose headers   'content-encoding': 'gzip' }
+21 silly get cb [ 200,
+21 silly get   { date: 'Wed, 03 Oct 2018 12:43:36 GMT',
+21 silly get     'content-type': 'application/json; charset=UTF-8',
+21 silly get     'transfer-encoding': 'chunked',
+21 silly get     connection: 'keep-alive',
+21 silly get     'set-cookie':
+21 silly get      [ '__cfduid=dc685f2eb393b9c80a7d8ba24d74ef90f1538570615; expires=Thu, 03-Oct-19 12:43:35 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+21 silly get     'cf-cache-status': 'MISS',
+21 silly get     'cache-control': 'max-age=300',
+21 silly get     'cf-ray': '463f7eca490bc027-MRS',
+21 silly get     etag: 'W/"afcf99d55f3e391177829f0d6883433c"',
+21 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+21 silly get     'last-modified': 'Sun, 27 May 2018 10:28:17 GMT',
+21 silly get     vary: 'accept-encoding, accept',
+21 silly get     server: 'cloudflare',
+21 silly get     'content-encoding': 'gzip' } ]
+22 verbose get saving nodemodules to /home/segond/.npm/registry.npmjs.org/nodemodules/.cache.json
+23 verbose stack TypeError: Cannot convert undefined or null to object
+23 verbose stack     at Function.keys (<anonymous>)
+23 verbose stack     at pickVersionFromRegistryDocument (/usr/share/npm/lib/fetch-package-metadata.js:121:29)
+23 verbose stack     at /usr/share/npm/node_modules/iferr/index.js:13:50
+23 verbose stack     at /usr/share/npm/lib/utils/pulse-till-done.js:19:8
+23 verbose stack     at saved (/usr/share/npm/lib/cache/caching-client.js:168:7)
+23 verbose stack     at /usr/share/npm/node_modules/graceful-fs/polyfills.js:210:7
+23 verbose stack     at FSReqWrap.oncomplete (fs.js:135:15)
+24 verbose cwd /home/segond/Documents/SIMPLON/ProjetZakia/jeu_de_la_vie
+25 error Linux 4.15.0-36-generic
+26 error argv "/usr/bin/node" "/usr/bin/npm" "install" "nodemodules"
+27 error node v8.10.0
+28 error npm  v3.5.2
+29 error Cannot convert undefined or null to object
+30 error If you need help, you may report this error at:
+30 error     <https://github.com/npm/npm/issues>
+31 verbose exit [ 1, true ]
