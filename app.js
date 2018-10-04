@@ -1,7 +1,4 @@
 
-
-
-
 var tableau = [];
 var tab = $('#tab');
 
@@ -11,21 +8,28 @@ tab.append('<table></table>'); //créer le tableau
 
 
 
-for(y=0; y<15; y++){ // créer les autre lygne (tr)
+for(y=0; y<15; y++)
+{ // créer les autre ligne (tr)
     var row = tab.append('<tr>'+ tableau[y] + '</tr>')
     
    
-    for(x=0; x<15; x++){ // créer toute les autres cellules vydes quy accueylleront les resultats (td ou th)
+    for(x=0; x<15; x++)
+    { // créer toute les autres cellules vides qui accueilleront les resultats (td ou th)
         var cellvide = row.append('<td></td>')
         
     }
 
-  }  
-// on parcourt les lygnes et on ynytylyse a zero
+}  
+
+
+
+// on parcourt les lignes et on initilise a zero
 for (var y=0; y<15; y++)
 {
-		tab[x] =0;
+	tab[x] =0;
 }
+
+
 
 
 var vegetaux = 
@@ -51,7 +55,7 @@ console.log(newVegetal.tmpReproduct); // Affiche 2
 }
 
 -----------------------------------------------------------------------------------------------------
-cours de Orel : 
+cours d Orel : 
 
 // cette fonction renvoie un tableau en 2 dimensions contenant des objets placée aléatoirement
 
@@ -64,6 +68,8 @@ function genere_monde (monde,x, y, nb_vege, nb_carni, nb_vegetaux){
         [av1, V2, null]
     ];
 }
+
+
 
 // cette fonction genere le html qui permet d'afficher le monde
 
