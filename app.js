@@ -2,6 +2,7 @@
 var tableau = [];
 var tab = $('#tab');
 
+
 tab.append('<table></table>'); //créer le tableau
 
 for(y=0; y<15; y++)
@@ -10,21 +11,32 @@ for(y=0; y<15; y++)
     
     for(x=0; x<15; x++)
     { // créer toute les autres cellules vides qui accueilleront les resultats (td ou th)
-        var cell = row.append('<td></td>')
+        var cell = row.append('<td style="background-color: #FFFFFF" class="case"></td>')
        
     }
-}  
+} 
+
+
+
+
+
+
+
+
+
 // function initjeu ()
 
 // {
-//     for (tableau[x,1] & tableau[y,1]) 
+//     for (tableau[x] & tableau[y]) 
 //     {
 //         var cell = newVegetal.valeur
         
 //     }
 
-//     if (var cell == 1)
-//         var cell = row.append ('<td class = 'green'></td>')
+// 	    if (var cell == 1)
+// 	    {
+// 	        var cell = row.append ('<td class = 'green'></td>')
+// 	    }
 // }
 
 
