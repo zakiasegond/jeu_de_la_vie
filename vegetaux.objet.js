@@ -58,20 +58,26 @@ function generer_vegetaux()
 
 		    e[cpt].style.backgroundColor = '#39790D';
 
-	    }
+			 cpt ++;    
+
+        }
 
 	    else
 	    {
 
             console.log("ca ne marche pas");
 
-        }
+    	}
+	}
 
-        cpt ++;
+			setInterval(function(cpt)
+			{
+				
+				5000;
+				 return generer_vegetaux();
 
-    }
+			} );
 
-}
+}    
 
-generer_vegetaux();
 
