@@ -2,57 +2,35 @@
 var tableau = [];
 var tab = $('#tab');
 
-
 tab.append('<table></table>'); //créer le tableau
-
-
-
 
 for(y=0; y<15; y++)
 { // créer les autre ligne (tr)
     var row = tab.append('<tr>'+ tableau[y] + '</tr>')
     
-   
     for(x=0; x<15; x++)
     { // créer toute les autres cellules vides qui accueilleront les resultats (td ou th)
-        var cellvide = row.append('<td></td>')
-        
+        var cell = row.append('<td></td>')
+       
     }
-
 }  
+// function initjeu ()
+
+// {
+//     for (tableau[x,1] & tableau[y,1]) 
+//     {
+//         var cell = newVegetal.valeur
+        
+//     }
+
+//     if (var cell == 1)
+//         var cell = row.append ('<td class = 'green'></td>')
+// }
 
 
 
-// on parcourt les lignes et on initilise a zero
-for (var y=0; y<15; y++)
-{
-	tab[x] =0;
-}
 
 
-
-
-var vegetaux = 
-{
-
-    tmpReproduct: 3, 
-    nbReproduit: 4,
-};
-
-
-// Crée unAutreObjet avec unObjet comme prototype
-
-function reproduction()
-{ 
-    for (var i = Things.length - 1; i >= 0; i--) {
-        Things[i]
-    }
-
-var newVegetal = Object.create(vegetaux);
-
-
-console.log(newVegetal.tmpReproduct); // Affiche 2
-}
 
 // -----------------------------------------------------------------------------------------------------
 // cours d Orel : 
@@ -86,6 +64,16 @@ console.log(newVegetal.tmpReproduct); // Affiche 2
 //         for(x=0; x<15; x++)
 //         {
 
+
+//             if(m[i][j])
+//             {
+//                 m[i][j].update();
+//             } 
+//         }      
+//     }
+// }
+
+
 //             if(m[i][j])
 //             {
 //                 m[i][j].update();
@@ -101,6 +89,10 @@ console.log(newVegetal.tmpReproduct); // Affiche 2
 // var monde = genere_monde(monde, 10,10);
 
 
+// var monde = genere_monde(monde, 10,10);
+
+
+
 
 // while(true)
 // {
@@ -111,6 +103,17 @@ console.log(newVegetal.tmpReproduct); // Affiche 2
 
 // //ou
 // //setInterval est une fonction qui va generer le monde automatiquement.
+
+// while(true)
+// {
+// afficher_monde (monde);
+// maj_objets(monde);
+
+// }
+
+// //ou
+// //setInterval est une fonction qui va generer le monde automatiquement.
+
 
 // setInterval(function
 // {
