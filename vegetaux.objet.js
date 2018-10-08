@@ -1,59 +1,50 @@
 console.log('hello');
 
- // var vegetaux = {
- //    valeur:1,
- //     //maturite: croissance_vegetaux();
- //     //reproduction:reproduction_vegetaux();
- //     color : "green",
- // };
+var vegetaux = {
+    valeur: 1,
+    maturite : 4,
+    color : "green",
+    affiche : function()
+    {
+    	document.write(this.maturite);
+    }
+
+}
+vegetaux.affiche();
+
+
+
+vegetaux.maturite = 4;
+
+console.log(vegetaux.maturite);
 
 
 
 
-
-
-
-
-
-
-// console.log(newVegetal); // Affiche 2
-// }
-
-
-
-
-
-var vegetaux = new Object();
-vegetaux.vie = 1;
-vegetaux.age = 0;
-
-
-
-    function generer_vegetaux()
-{
-    var e = document.getElementsByClassName('case');
-    var cpt = 0;
-//var newVegetal = Object.create(vegetaux);
+// function generer_vegetaux()
+// {
+//     var e = document.getElementsByClassName('case');
+//     var cpt = 0;
     
-for(var i=0; i< 4; i++)
-{
-        if(e[cpt].style.backgroundColor === 'rgb(255, 255, 255)')
-        {
+//     for(var i=0; i< 4; i++)
+//     {
+//         if(e[cpt].style.backgroundColor === 'rgb(255, 255, 255)')
+//         {
+                
+//             e[cpt].style.backgroundColor = '#39790D';
+//         }
             
-            e[cpt].style.backgroundColor = '#39790D';
-        }
-        
-        else
-        {
-            console.log("ca ne marche pas");
-        }
-        cpt++;
+//         else
+//         {
+//             console.log("ca ne marche pas");
+//         }
+//             cpt++;
 
-}
+//     }
 
-}
-        
- generer_vegetaux()
+//      generer_vegetaux()
+// }
+            
 
  //function croissance_vegetaux()
 // {
@@ -77,3 +68,22 @@ for(var i=0; i< 4; i++)
 
 
                       
+//  var newVegetal = Object.create(vegetaux);
+//  var vegetaux = {
+//     valeur:1,
+//      //reproduction:reproduction_vegetaux();
+//      color : "green",
+ 
+//   };
+//      vegetaux.maturite : generer_vegetaux();
+
+// // var vegetaux = {
+// //     maturite: 4,
+// //     valeur: 1,
+// //     color: "green"
+// // };
+
+
+// // var vegetaux = new Object();
+// // vegetaux.vie = 1;
+// // vegetaux.age = 0;
