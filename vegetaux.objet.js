@@ -1,32 +1,19 @@
 console.log('hello');
 
-// var vegetaux = 
-// {
-//     valeur: [1], 
-//     maturite: [4],
-//     graine:[3]
-
-// };
-
-// function croissance(maturite)
-// {
-// 	for (var i = 0; i < 4; i++) {
-// 		[i]
-// 	}
-// }
+ // var vegetaux = {
+ //    valeur:1,
+ //     //maturite: croissance_vegetaux();
+ //     //reproduction:reproduction_vegetaux();
+ //     color : "green",
+ // };
 
 
 
-// // Crée unAutreObjet avec unObjet comme prototype
 
-// function reproduction()
-// { 
-//     for (var  i = 0; i < vegetaux.length; i++) {
-//         vegetaux[i]
 
-//     }
 
-// var newVegetal = Object.create(vegetaux);
+
+
 
 
 // console.log(newVegetal); // Affiche 2
@@ -42,42 +29,51 @@ vegetaux.age = 0;
 
 
 
-function generer_vegetaux()
+    function generer_vegetaux()
 {
     var e = document.getElementsByClassName('case');
     var cpt = 0;
-
-
-    for(var i=0; i< 4; i++)
-    {
-
-        // console.log(e[cpt].style.backgroundColor);
-
+//var newVegetal = Object.create(vegetaux);
+    
+for(var i=0; i< 4; i++)
+{
         if(e[cpt].style.backgroundColor === 'rgb(255, 255, 255)')
-	    {
-
-		    e[cpt].style.backgroundColor = '#39790D';
-
-			 cpt ++;    
-
+        {
+            
+            e[cpt].style.backgroundColor = '#39790D';
         }
-
-	    else
-	    {
-
+        
+        else
+        {
             console.log("ca ne marche pas");
+        }
+        cpt++;
 
-    	}
-	}
+}
 
-			setInterval(function(cpt)
-			{
-				
-				5000;
-				 return generer_vegetaux();
+}
+        
+ generer_vegetaux()
 
-			} );
+ //function croissance_vegetaux()
+// {
+//  
+//      for(var i=0; i< 4; i++)
+//     setIntarval(function(){
+//         cpt++;
+//     },
+//         1000);        
+// }
 
-}    
+// croissance_vegetaux();
+
+    
+
+//         var interval = setInterval(generer_vegetaux(),500);
+//         cpt++;
+//         console.log(interval);
+//     }      
+// }        
 
 
+                      
