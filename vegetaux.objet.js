@@ -1,9 +1,9 @@
 console.log('hello');
 
-var vegetaux = new Object();
+var vegetaux = new Object(); // création d'un nouvel objet
 vegetaux.vie = 1;
 vegetaux.age = 0;
-vegetaux.coord = shuffleTable();
+vegetaux.coord = shuffleTable(); // variable qui appelle la fonction shuffleTable dans le app.js
 
 
 vegetaux.etaler = function(vegetauxCoord)
@@ -11,7 +11,7 @@ vegetaux.etaler = function(vegetauxCoord)
 	var choixEtalage = Math.floor(Math.random() *Math.floor(3));
 	
 
-	if(choixEtalage == 0)
+	if(choixEtalage == 0) // permet de faire deplacer de haut en bas et de droite a gauche.
 	{
 		var xActuel = vegetauxCoord[1]++;
 		var yActuel = vegetauxCoord[0]; 
@@ -36,7 +36,7 @@ vegetaux.etaler = function(vegetauxCoord)
 	}
 
 	vegetauxCoord = [yActuel, xActuel, "#" + yActuel + "C" + xActuel];
-	$(vegetauxCoord[2]).css("background-color", "green");
+	$(vegetauxCoord[2]).css("background-color", "green"); // colore la case en vert.
 	return vegetauxCoord;	
 	
 }
@@ -56,6 +56,8 @@ setInterval(function()
 		vegetaux.etaler(vegetauxCoord);
 		
 },500);
+
+
 
 //vegetaux.generer_vegetaux();
 console.log(vegetaux.coord);
