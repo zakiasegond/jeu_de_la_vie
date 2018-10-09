@@ -1,89 +1,65 @@
 console.log('hello');
 
-var vegetaux = {
-    valeur: 1,
-    maturite : 4,
-    color : "green",
-    affiche : function()
-    {
-    	document.write(this.maturite);
-    }
+var vegetaux = new Object();
+vegetaux.vie = 1;
+vegetaux.age = 0;
+vegetaux.coord = shuffleTable();
 
+
+vegetaux.etaler = function(vegetauxCoord)
+{
+	var choixEtalage = Math.floor(Math.random() *Math.floor(3));
+	
+
+	if(choixEtalage == 0)
+	{
+		var xActuel = vegetauxCoord[1]++;
+		var yActuel = vegetauxCoord[0]; 
+	}
+
+	if(choixEtalage == 1)
+	{
+		var xActuel = vegetauxCoord[1]--;
+		var yActuel = vegetauxCoord[0]; 
+	}
+
+	if(choixEtalage == 2)
+	{
+		var xActuel = vegetauxCoord[1];
+		var yActuel = vegetauxCoord[0]++; 
+	}
+
+	if(choixEtalage == 3)
+	{
+		var xActuel = vegetauxCoord[1];
+		var yActuel = vegetauxCoord[0]--; 
+	}
+
+	vegetauxCoord = [yActuel, xActuel, "#" + yActuel + "C" + xActuel];
+	$(vegetauxCoord[2]).css("background-color", "green");
+	return vegetauxCoord;	
+	
 }
-vegetaux.affiche();
+
+vegetauxCoord = vegetaux.coord;
+var temps = 0;
+var memoire = 0;
+setInterval(function()
+{
+		temps ++;
+		if(temps - memoire == 4)
+		{
+			vegetauxCoord = shuffleTable();
+			memoire = temps;
+		}
+		console.log(temps);
+		vegetaux.etaler(vegetauxCoord);
+		
+},500);
+
+//vegetaux.generer_vegetaux();
+console.log(vegetaux.coord);
+console.log(vegetaux.vie);
+console.log("son age est de : "+vegetaux.age);
 
 
-
-vegetaux.maturite = 4;
-
-console.log(vegetaux.maturite);
-
-
-
-
-// function generer_vegetaux()
-// {
-//     var e = document.getElementsByClassName('case');
-//     var cpt = 0;
-    
-//     for(var i=0; i< 4; i++)
-//     {
-//         if(e[cpt].style.backgroundColor === 'rgb(255, 255, 255)')
-//         {
-                
-//             e[cpt].style.backgroundColor = '#39790D';
-//         }
-            
-//         else
-//         {
-//             console.log("ca ne marche pas");
-//         }
-//             cpt++;
-
-//     }
-
-//      generer_vegetaux()
-// }
-            
-
- //function croissance_vegetaux()
-// {
-//  
-//      for(var i=0; i< 4; i++)
-//     setIntarval(function(){
-//         cpt++;
-//     },
-//         1000);        
-// }
-
-// croissance_vegetaux();
-
-    
-
-//         var interval = setInterval(generer_vegetaux(),500);
-//         cpt++;
-//         console.log(interval);
-//     }      
-// }        
-
-
-                      
-//  var newVegetal = Object.create(vegetaux);
-//  var vegetaux = {
-//     valeur:1,
-//      //reproduction:reproduction_vegetaux();
-//      color : "green",
- 
-//   };
-//      vegetaux.maturite : generer_vegetaux();
-
-// // var vegetaux = {
-// //     maturite: 4,
-// //     valeur: 1,
-// //     color: "green"
-// // };
-
-
-// // var vegetaux = new Object();
-// // vegetaux.vie = 1;
-// // vegetaux.age = 0;

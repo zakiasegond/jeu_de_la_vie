@@ -1,7 +1,7 @@
 console.log("hello");
+
 var tableau = [];
 var tab = $('#tab');
-
 
 tab.append('<table></table>'); //créer le tableau
 
@@ -11,10 +11,24 @@ for(y=0; y<15; y++)
     
     for(x=0; x<15; x++)
     { // créer toute les autres cellules vides qui accueilleront les resultats (td ou th)
-        var cell = row.append('<td style="background-color: #FFFFFF" class="case"></td>')
+        var cell = row.append('<td id="'+y+'C'+x+'" style="background-color: #FFFFFF" class="case"></td>')
        
     }
+
 } 
+
+//fonction pour mélanger aleatoirement les cellules vides du tableau
+function shuffleTable()
+{  
+   var y = Math.floor(Math.random() * Math.floor(15));    
+   var x = Math.floor(Math.random() * Math.floor(15)); 
+   var coord = [y, x, "#"+ y + "C" + x];
+    return coord;
+}
+
+
+
+   
 
 
 
